@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YASHA KHAN PORTFOLIO</title>
+  <script>
+    function showContent(divId) {
+    // Hide all content divs
+    var contentDivs = document.querySelectorAll('.content');
+    contentDivs.forEach(function(div) {
+      div.style.display = 'none';
+    });
+
+    // Show the selected content div
+    var selectedDiv = document.getElementById(divId);
+    if (selectedDiv) {
+      selectedDiv.style.display = 'block';
+    }
+  }
+    window.onload= function(){
+    showContent('div1');
+    var i=0;
+    var hotstar=['images/h1.png','images/h2.png','images/h3.png','images/h4.png','images/h2.png'];
+    var intdes=['images/id1.png','images/id2.png','images/id3.png','images/id4.png','images/id5.png'];
+    var certificates=['images/c1.png','images/c2.png','images/c3.png','images/c4.png','images/c5.png',];    
+    function change_img(){
+          document.getElementById("cert").src=certificates[i];
+          document.getElementById("web1").src=intdes[i];
+          document.getElementById("web2").src=hotstar[i];
+        i++;
+        if(i>=hotstar.length){
+            i=0;
+        }
+         }
+    window.setInterval(change_img,1000);
+}
+
+</script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-image: url("images/bg.jpeg");
+    }
+   p,h2,h3,h4,a:any-link,h1{ color: #fff;text-align: center;}
+    header {
+     
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      background-color:darkslategray;
+    }
+   
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between; 
+    }
+    #cert{
+      border-radius: 20px;
+      width: 80%;
+      height: 80%;
+      margin-left: 10%;
+    }
+    .section-text,.section-images {
+      flex: 1;
+   /*   order: 1;  Change the order to 1 for larger screens */
+    }
+   
+    .w1{
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      align-items: center; 
+      border-radius: 8px;
+    }
+  .project img {width: 100%;border-radius: 8px;margin-bottom: 10px;}
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .adjustimage{
+    width:100%;
+    height:60%;
+  }
+
+  #p,#q{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  #appcontent{
+    width: 100%;
+    height: 90%;
+    margin: 40px;
+  }
+  #appname{
+    width: 100%;
+    height: 10%;
+    margin: 40px;
+  }
+  .contacticon{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    
+  }
+  .space{
+    height: 80px;
+  }
+  #contact {
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #444;
+    }
+    /* Media Queries for Responsive Design */
+    @media screen and (max-width: 768px) {
+ .space{
+  height: 50px;
+ }
+ #appcontent{
+    width: 80%;
+  }
+  #appname{
+    width: 80%;
+  }
+  nav {
+    flex-direction: row; /* Change back to row for small screens */
+    justify-content: space-around; /* Add space-around for better spacing */
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0; /* Remove margin for better spacing */
+  }
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .section-images {
+    text-align: center;
+   
+  }
+
+  .adjustimage,#p{
+    width:100%;
+    height: 20%;
+  }
+ 
+  .projects {
+    justify-content: flex-start; /* Adjust alignment for projects on small screens */
+  }
+
+  .project {
+    flex: 1 0 100%;
+    margin-bottom: 20px; /* Add margin for better spacing between projects */
+  }
+  .contacticon{
+    height: 20px;
+    width: 20px;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 1.5em;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YASHA KHAN</h1>
+    <p>Developer</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#heading">Projects</a>
+    <a href="#services">Services</a>
+    <!--<a href="#about">About Me</a>-->
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="section">
+      <div class="section-content" >
+        <div class="section-text">
+          <h2>About me</h2>
+          <p>Eager student with a strong academic background poised to apply
+            knowledge in real-world scenarios. Proven leadership in competitions
+            and hackathons, adept at making decisive choices under pressure.
+            NCC Cadet with a steadfast commitment to discipline, leadership, 
+            and teamwork.</p>
+        </div>
+        <div class="section-images">
+          <h2>Certifications</h2>
+          <img src="images/c3.png" id ="cert" alt="Me"/>
+        </div>
+      </div>
+    </section>
+   
+    <center><h2 id="heading">PORTFOLIO</h2></center>
+    <nav>
+      <a href="#heading" onclick="showContent('div1')">Apps</a>
+      <a href="#heading" onclick="showContent('div2')">Websites</a>
+      <a href="#heading" onclick="showContent('div3')">Other Projects</a>
+    </nav>
+
+
+    <div id="div1" class="content">
+      <section >
+              <h4 id="appname">VOICE ASSISSTANT</h4>
+              <p  id="appcontent">The voice assistant app seamlessly 
+                transforms spoken words into actionable information.
+                The app processes these spoken commands, converting 
+                them into accurate text  and   audio format. This 
+                dual-output feature ensures accessibility and convenience
+                 for users.</p> 
+              <img src="images/img2.png"  alt="VOICE ASSISSTANT" class="w1" >
+      </section>
+      <section id="projects" class="section">
+              <h4 id="appname" >IMAGE EDITOR</h4>
+               <p  id="appcontent">This app enables users to 
+                 perform a range of editing tasks on images  like 
+                image cropping , rotating ,  frame shape etc.</p> 
+               <img src="images/img3.png"  alt="IMAGE EDITOR" height="100%" width="100%" class="w1" >
+      </section>
+      <section >
+              <h4 id="appname">GREENGAURD</h4>
+              <p  id="appcontent">The app guides and helps local people
+                   with various agriculture tasks based on weather 
+                   forecasts and their queries. It assists individuals
+                    in their own regional language through voice input.
+                     The Help Section addresses different agricultural
+                      issues, providing support to users.</p> 
+              <img src="images/img1.png" class="w1" alt="GREENGAURD">
+      </section>
+    </div>
+
+
+    <div id="div2" class="content">
+      <section >
+            <h4 id="appname">U-DESIGN (INTERIOR DESIGN WEBSITE)</h4>
+            <p  id="appcontent"> Implemented a user-friendly user Interface
+                 to provide users with a visually appealing and informative 
+                 experience.Introduced collaborative features, facilitating 
+                 seamless communication between clients and design professionals,
+                  ensuring transparency and a smoother project execution.</p> 
+            <img src="images/id3.png" class="w1" id="web1" alt="INTERIOR DESIGN">
+      </section>
+      <section  >
+        <div class="">
+          <h4 id="appname" >HOTSTAR FRONTEND CLONE WEBSITE</h4>
+          <p  id="appcontent">Successfully spearheaded the creation of a Hotstar
+             frontend website clone, meticulously replicating the platform's 
+             design and functionality. Applied expertise in HTML, CSS, and 
+             JavaScript to recreate responsive and visually engaging user 
+             interfaces. Collaborated closely with a cross-functional team 
+             to ensure accurate implementation of features, maintaining fidelity 
+             to the original design. This project showcased a keen eye for detail
+             and proficiency in frontend technologies, resulting in a high-fidelity
+             clone that serves as a testament to design and development capabilities.</p> 
+          <img src="images/h3.png"  class="w1"id="web2" alt="HOTSTAR" >
+    </section>
+    </div>
+
+
+    <div id="div3" class="content">
+      <section  class="section">
+              <h4 id="appname" >SCIENTIFIC CALCULATOR (TKinter GUI)</h4>
+              <p  id="appcontent">The Python scientific calculator project using Tkinter
+                 is a graphical user interface (GUI) application that provides a user-friendly
+                  environment for performing various scientific calculations. </p> 
+              <img src="images/calc.png" class="w1" id="q" alt=img[i]>
+      </section>
+    </div>
+   
+    
+    <div class="space"></div>
+    
+  </div>
+    
+  <center><div><h2 id="services">Services</h2></div></center>
+  <img src="images/services.png" alt="Services Image 1" class="adjustimage">
+  <center id ="contact">
+    <h2>Contact</h2>
+    <div height="100px"></div>
+    <h4 style="display:inline-flex;"><img src="images/phone-call.png" alt="phone no."  class="contacticon">8209845814</h4>
+    <h4 style="display:inline-flex;"><img src="images/gmail.png" alt=" gmail" class="contacticon">yashakhan4761@gmail.com</h4>
+    <h4 style="display:inline-flex;"><img src="images/linkedin.png" alt="linkedin"  class="contacticon">
+       <a href="https://www.linkedin.com/in/yasha-khan-1823ba244">linkedin.com/in/yasha-khan</a></h4>
+</center>
+  <footer>
+    <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
