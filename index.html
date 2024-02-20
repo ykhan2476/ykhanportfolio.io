@@ -23,7 +23,7 @@
     var i=0;
     var hotstar=['images/h1.png','images/h2.png','images/h3.png','images/h4.png','images/h2.png'];
     var intdes=['images/id1.png','images/id2.png','images/id3.png','images/id4.png','images/id5.png'];
-    var certificates=['images/c1.png','images/c2.png','images/c3.png','images/c4.png','images/c5.png',];    
+    var certificates=['images/c1.png','images/c2.png','images/c3.png','images/c4.png','images/c5.png'];    
     function change_img(){
           document.getElementById("cert").src=certificates[i];
           document.getElementById("web1").src=intdes[i];
@@ -33,7 +33,6 @@
             i=0;
         }
          }
-    
     window.setInterval(change_img,1000);
 }
 
@@ -103,11 +102,6 @@
     }
    
     .w1{
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-    }
-    .new{
       width: 100%;
       height: 100%;
       border-radius: 20px;
@@ -256,7 +250,7 @@
         </div>
         <div class="section-images">
           <h2>Certifications</h2>
-          <img src="images/c3.png" id ="cert" alt="Me"/>
+          <img src="images/c6.jpg" id ="cert" alt="Me"/>
         </div>
       </div>
     </section>
@@ -270,22 +264,30 @@
 
 
     <div id="div1" class="content">
+      <section id="projects" class="section">
+        <h4 id="appname" >TextualTune Pdf App</h4>
+         <p  id="appcontent">Developed an app which searches for Telugu and Urdu words in PDF documents.
+           It processes pdf to extract text and generate coherent outputs. 
+           It also translates pdf text into various Indian traditional languages.</p> 
+         <img src="images/img6.png"  alt="IMAGE EDITOR" height="100%" width="100%" class="w1" >
+      </section>
       <section >
               <h4 id="appname">VOICE ASSISSTANT</h4>
-              <p  id="appcontent">The voice assistant app seamlessly 
-                transforms spoken words into actionable information.
-                The app processes these spoken commands, converting 
-                them into accurate text  and   audio format. This 
-                dual-output feature ensures accessibility and convenience
-                 for users.</p> 
-              <img src="images/img2.png"  alt="VOICE ASSISSTANT" class="new" >
+              <p  id="appcontent">The voice assistant app seamlessly provides 
+                text and voice outputs in response to users' voice queries, 
+                catering to the needs of all users, including those who may
+                 be uneducated. It transforms spoken words into actionable 
+                 information by processing spoken commands and converting them
+                  into accurate text and audio formats. This dual-output feature
+                   ensures accessibility and convenience for all users.</p> 
+              <img src="images/img2.png"  alt="VOICE ASSISSTANT" class="w1" >
       </section>
       <section id="projects" class="section">
               <h4 id="appname" >IMAGE EDITOR</h4>
                <p  id="appcontent">This app enables users to 
                  perform a range of editing tasks on images  like 
                 image cropping , rotating ,  frame shape etc.</p> 
-               <img src="images/img3.png"  alt="IMAGE EDITOR" height="100%" width="100%" class="new" >
+               <img src="images/img3.png"  alt="IMAGE EDITOR" height="100%" width="100%" class="w1" >
       </section>
       <section >
               <h4 id="appname">GREENGAURD</h4>
@@ -308,7 +310,7 @@
                  experience.Introduced collaborative features, facilitating 
                  seamless communication between clients and design professionals,
                   ensuring transparency and a smoother project execution.</p> 
-            <img src="images/id2.png" class="w1" id="web1" alt="INTERIOR DESIGN">
+            <img src="images/id3.png" class="w1" id="web1" alt="INTERIOR DESIGN">
       </section>
       <section  >
         <div class="">
@@ -322,7 +324,7 @@
              to the original design. This project showcased a keen eye for detail
              and proficiency in frontend technologies, resulting in a high-fidelity
              clone that serves as a testament to design and development capabilities.</p> 
-          <img src="images/h2.png"  class="w1"id="web2" alt="HOTSTAR" >
+       <img src="images/h3.png"  class="w1"id="web2" alt="HOTSTAR" >
     </section>
     </div>
 
