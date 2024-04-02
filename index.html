@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YASHA KHAN PORTFOLIO</title>
   <script>
+   
     function showContent(divId) {
     // Hide all content divs
     var contentDivs = document.querySelectorAll('.content');
@@ -18,23 +19,38 @@
       selectedDiv.style.display = 'block';
     }
   }
-    window.onload= function(){
+  window.onload = function() {
     showContent('div1');
-    var i=0;
-    var hotstar=['images/h1.png','images/h2.png','images/h3.png','images/h4.png','images/h2.png'];
-    var intdes=['images/id1.png','images/id2.png','images/id3.png','images/id4.png','images/id5.png'];
-    var certificates=['images/c1.png','images/c2.png','images/c3.png','images/c4.png','images/c5.png'];    
-    function change_img(){
-          document.getElementById("cert").src=certificates[i];
-          document.getElementById("web1").src=intdes[i];
-          document.getElementById("web2").src=hotstar[i];
+    var i = 0;
+    var hotstar = ['images/h1.png', 'images/h2.png', 'images/h3.png', 'images/h4.png', 'images/h2.png'];
+    var intdes = ['images/id1.png', 'images/id2.png', 'images/id3.png', 'images/id4.png', 'images/id5.png'];
+    var certificates = ['images/c1.png', 'images/c2.png', 'images/c3.png', 'images/c4.png', 'images/c5.png'];
+    var fooddeck = ['images/fd1.PNG', 'images/fd2.PNG', 'images/fd3.PNG'];
+    var esolitude = ['images/es1.PNG', 'images/es2.PNG', 'images/es3.PNG'];
+
+    function change_img() {
+        document.getElementById("cert").src = certificates[i];
+        document.getElementById("web1").src = intdes[i];
+        document.getElementById("web2").src = hotstar[i];
         i++;
-        if(i>=hotstar.length){
-            i=0;
+        if (i >= hotstar.length) {
+            i = 0;
         }
-         }
-    window.setInterval(change_img,1000);
+    }
+    window.setInterval(change_img, 1000);
+
+    var j = 0; // Separate index for fooddeck carousel
+    function change_img2() {
+        document.getElementById("Fd").src = fooddeck[j];
+        document.getElementById("ES").src = esolitude[j];
+        j++;
+        if (j >= fooddeck.length) {
+            j = 0;
+        }
+    }
+    window.setInterval(change_img2, 1000);
 }
+
 
 </script>
   <style>
@@ -43,37 +59,45 @@
       margin: 0;
       padding: 0;
     }
+ 
+
 
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       background-image: url("images/bg.jpeg");
     }
-   p,h2,h3,h4,a:any-link,h1{ color: #fff;text-align: center;}
+   p,h2,h3,h4,h1{ color: #fff;text-align: center;}
     header {
      
       color: #fff;
       text-align: center;
       padding: 2rem;
     }
-
     nav {
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-    }
+  background-color: #d9d62b; /* Background color */
+  padding: 10px 0; /* Add padding */
+  text-align: center; /* Center align links */
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      margin: 0 10px;
-    }
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  font-weight: bold;
+  color:  #000;  /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding */
+  margin: 0 10px; /* Add margin between links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
 
-    nav a:hover {
-      background-color:darkslategray;
-    }
-   
+nav a:hover {
+  background-color: #555; /* Background color on hover */
+}
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -166,6 +190,11 @@
       padding: 1rem 0;
       background-color: #444;
     }
+
+
+
+
+
     /* Media Queries for Responsive Design */
     @media screen and (max-width: 768px) {
  .space{
@@ -220,29 +249,26 @@
   header {
     font-size: 1.5em;
   }
+ 
 }
   </style>
 </head>
 <body>
   <header>
     <h1>YASHA KHAN</h1>
-    <p>Developer</p>
+    <h2>Developer</h2>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#heading">Projects</a>
-    <a href="#services">Services</a>
-    <!--<a href="#about">About Me</a>-->
-    <a href="#contact">Contact</a>
-  </nav>
+
 
   <div class="container">
     <section id="home" class="section">
       <div class="section-content" >
         <div class="section-text">
           <h2>About me</h2>
-          <p>Eager student with a strong academic background poised to apply
+          <p>I'm a proficient Flutter developer with hands-on experience in
+             building mobile apps. Eager student with a strong 
+            academic background poised to apply
             knowledge in real-world scenarios. Proven leadership in competitions
             and hackathons, adept at making decisive choices under pressure.
             NCC Cadet with a steadfast commitment to discipline, leadership, 
@@ -254,15 +280,16 @@
         </div>
       </div>
     </section>
-   
-    <center><h2 id="heading">PORTFOLIO</h2></center>
-    <nav>
+   </div>
+   <center><h2 id="heading">PORTFOLIO</h2></center>
+    <nav class="nav-container">
       <a href="#heading" onclick="showContent('div1')">Apps</a>
       <a href="#heading" onclick="showContent('div2')">Websites</a>
       <a href="#heading" onclick="showContent('div3')">Other Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-
+   <div class="container">
     <div id="div1" class="content">
       <section id="projects" class="section">
         <h4 id="appname" >TextualTune Pdf App</h4>
@@ -281,6 +308,20 @@
                   into accurate text and audio formats. This dual-output feature
                    ensures accessibility and convenience for all users.</p> 
               <img src="images/img2.png"  alt="VOICE ASSISSTANT" class="w1" >
+      </section>
+      <section >
+        <h4 id="appname">Food Deck</h4>
+        <p  id="appcontent"> A Flutter Food delivery app 
+          with a seamless ordering experience and a diverse
+           range of cuisines from local favorites to international
+          delights.</p> 
+        <img src="images/fd2.PNG" class="w1" id="Fd" alt="fooddeck">
+      </section>
+      <section >
+        <h4 id="appname">E-Solitude</h4>
+        <p  id="appcontent"> A Flutter mcq based quiz game app which dive into a world of knowledge and fun with Flutter Quiz. User can Test their
+          expertise and check the game score.</p> 
+        <img src="images/es2.PNG" class="w1" id="ES" alt="ESolitude">
       </section>
       <section id="projects" class="section">
               <h4 id="appname" >IMAGE EDITOR</h4>
@@ -330,6 +371,38 @@
 
 
     <div id="div3" class="content">
+      
+      <section  class="section">
+        <h4 id="appname" >CARDIOVASCULAR HEART DISEASE PREDICTION SYSTEM</h4>
+        <p  id="appcontent">Cardiovascular diseases (CVDs) are a significant
+           global health concern, contributing to a substantial number of 
+           deaths each year. Early detection and prediction of CVDs can
+            greatly aid in preventive healthcare and timely intervention.
+             This project aims to develop a predictive model for cardiovascular 
+             diseases using machine learning techniques.
+
+           It predicts the likelihood of an individual 
+           having cardiovascular disease based on various risk factors and
+           clinical parameters. By leveraging machine learning algorithms, 
+           particularly Random Forest Classifier, the model will analyze
+            input data to provide predictions. </p> 
+        <img src="images/heartdisease.png" class="w1" id="q" alt=img[i]>
+    </section>
+    <section  class="section">
+     <h4 id="appname" >PASSWORD MANAGER </h4>
+     <p  id="appcontent">This is a password management
+       project that utilizes RSA encryption for storing
+        and retrieving passwords securely. It provides a
+         graphical user interface (GUI) built using Tkinter,
+          a Python library for creating GUI applications.
+
+      The objective of this project is to offer a secure 
+      solution for managing passwords by encrypting them
+       with RSA encryption. Users can save their passwords
+        along with a unique key, and retrieve them later using 
+        the same key.</p> 
+       <img src="images/passwordmanager.png" class="w1" id="q" alt=img[i]>
+     </section>
       <section  class="section">
         <h4 id="appname" >Bank Personal Loan Modelling System </h4>
         <p  id="appcontent">The "Bank Personal Loan Modelling" 
@@ -366,7 +439,7 @@
     <h4 style="display:inline-flex;"><img src="images/phone-call.png" alt="phone no."  class="contacticon">8209845814</h4>
     <h4 style="display:inline-flex;"><img src="images/gmail.png" alt=" gmail" class="contacticon">yashakhan4761@gmail.com</h4>
     <h4 style="display:inline-flex;"><img src="images/linkedin.png" alt="linkedin"  class="contacticon">
-       <a href="https://www.linkedin.com/in/yasha-khan-1823ba244">linkedin.com/in/yasha-khan</a></h4>
+       <a   style="color: #fff;" href="https://www.linkedin.com/in/yasha-khan-1823ba244">linkedin.com/in/yasha-khan</a></h4>
 </center>
   <footer>
     <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
