@@ -180,7 +180,39 @@ nav a:hover {
       padding: 1rem 0;
       background-color: #000000;
     }
-
+  .yellow-button {
+            background-color: transparent;
+            border: 2px solid rgb(255, 200, 0);
+            color: rgb(255, 200, 0);
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 10px;
+            float: right;
+        }
+        .fullyellow-button {
+      
+            background-color: rgb(255, 200, 0);
+            border: 2px solid rgb(255, 200, 0);
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 10px;
+            float: right;
+            color:black;
+        }
+        .yellow-button:hover {
+            background-color:rgb(255, 200, 0);
+            color: black;
+        }
+        .fullyellow-button:hover {
+            border: 2px solid rgb(255, 200, 0);
+            background-color: transparent;
+            color: rgba(255, 217, 0, 0.993); ;
+        }
 
 
 
@@ -191,7 +223,7 @@ nav a:hover {
   height: 50px;
  }
 #cert{
-  width:90%;
+  width:80%;
   height:auto;
 }
  #appcontent{
@@ -268,13 +300,26 @@ nav a:hover {
         <div class="section-text">
          <center><img  id="about" src="images/slide6.png" style="border-radius:20px"></center>
         </div>
-        <div class="section-images" height="90%" width="70%">
+        <div class="section-images">
           <h2>Certifications</h2>
           <img src='images/cert7.PNG' id ="cert" alt="Me"/>
         </div>
       </div>
     </section>
    </div>
+  <div>
+    <center>
+      <a href="https://firebasestorage.googleapis.com/v0/b/hello-130a1.appspot.com/o/YKhanResume%20_JIET_CS_21.pdf?alt=media&token=1c6fbb86-8fbc-4599-8458-a639e4e76b56"
+             download="YashaKhanProjects.pdf"> 
+         <button class="fullyellow-button" style="margin-right: 60px; margin-top: 60px;">Resume
+       </button></a>
+      <a href="https://firebasestorage.googleapis.com/v0/b/hello-130a1.appspot.com/o/portfolioProjects.pdf?alt=media&token=c2d91158-33b0-409a-b1db-9bb8d3a1289c"
+   download="YashaKhanProjects.pdf"> 
+   <button class="yellow-button" style="margin-right: 60px; margin-top: 60px;top:900px">See All  Projects
+ </button>
+</a>
+    </center>
+  </div>
    <center><h2 id="heading">PORTFOLIO</h2></center>
     <nav class="nav-container">
       <a href="#heading" onclick="showContent('div1')">Apps</a>
