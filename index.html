@@ -22,33 +22,16 @@
   window.onload = function() {
     showContent('div1');
     var i = 0;
-    var hotstar = ['images/h1.png', 'images/h2.png', 'images/h3.png', 'images/h4.png', 'images/h2.png'];
-    var intdes = ['images/id1.png', 'images/id2.png', 'images/id3.png', 'images/id4.png', 'images/id5.png'];
     var certificates = ['images/c1.png', 'images/c2.png', 'images/c3.png', 'images/c4.png', 'images/c5.png'];
-    var fooddeck = ['images/fd1.PNG', 'images/fd2.PNG', 'images/fd3.PNG'];
-    var esolitude = ['images/es1.PNG', 'images/es2.PNG', 'images/es3.PNG'];
 
     function change_img() {
         document.getElementById("cert").src = certificates[i];
-        document.getElementById("web1").src = intdes[i];
-        document.getElementById("web2").src = hotstar[i];
         i++;
         if (i >= hotstar.length) {
             i = 0;
         }
     }
     window.setInterval(change_img, 1000);
-
-    var j = 0; // Separate index for fooddeck carousel
-    function change_img2() {
-        document.getElementById("Fd").src = fooddeck[j];
-        document.getElementById("ES").src = esolitude[j];
-        j++;
-        if (j >= fooddeck.length) {
-            j = 0;
-        }
-    }
-    window.setInterval(change_img2, 1000);
 }
 
 
@@ -307,13 +290,13 @@ nav a:hover {
           with a seamless ordering experience and a diverse
            range of cuisines from local favorites to international
           delights.</p> 
-        <img src="images/fd2.PNG" class="w1" id="Fd" alt="fooddeck">
+        <img src="images/fd2.PNG" class="w1" alt="fooddeck">
       </section>
       <section >
         <h4 id="appname">E-Solitude</h4>
         <p  id="appcontent"> A Flutter mcq based quiz game app which dive into a world of knowledge and fun with Flutter Quiz. User can Test their
           expertise and check the game score.</p> 
-        <img src="images/es2.PNG" class="w1" id="ES" alt="ESolitude">
+        <img src="images/es2.PNG" class="w1" alt="ESolitude">
       </section>
       <section id="projects" class="section">
               <h4 id="appname" >IMAGE EDITOR</h4>
@@ -343,7 +326,7 @@ nav a:hover {
                  experience.Introduced collaborative features, facilitating 
                  seamless communication between clients and design professionals,
                   ensuring transparency and a smoother project execution.</p> 
-            <img src="images/id3.png" class="w1" id="web1" alt="INTERIOR DESIGN">
+            <img src="images/id3.png" class="w1"  alt="INTERIOR DESIGN">
       </section>
       <section  >
         <div class="">
@@ -357,7 +340,7 @@ nav a:hover {
              to the original design. This project showcased a keen eye for detail
              and proficiency in frontend technologies, resulting in a high-fidelity
              clone that serves as a testament to design and development capabilities.</p> 
-       <img src="images/h3.png"  class="w1"id="web2" alt="HOTSTAR" >
+       <img src="images/h3.png"  class="w1" alt="HOTSTAR" >
     </section>
     </div>
 
