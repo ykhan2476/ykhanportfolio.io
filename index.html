@@ -22,7 +22,7 @@
   window.onload = function() {
     showContent('div1');
     var i = 0;
-    var certificates = ['images/c1.png', 'images/c2.png', 'images/c3.png', 'images/c4.png', 'images/c5.png'];
+    var certificates = ['images/cert1.png', 'images/cert2.png', 'images/cert3.png', 'images/cert4.png', 'images/cert5.png','images/cert6.png','images/cert7.png'];
 
     function change_img() {
         document.getElementById("cert").src = certificates[i];
@@ -100,6 +100,7 @@ nav a:hover {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      
       justify-content: space-between; 
     }
     #cert{
@@ -189,6 +190,10 @@ nav a:hover {
  .space{
   height: 50px;
  }
+#cert{
+  width:90%;
+  height:auto;
+}
  #appcontent{
     width: 80%;
   }
